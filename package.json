@@ -1,0 +1,30 @@
+{
+	"name": "starter-graphql-apollo-prisma-ts",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jeyofdev/starter-graphql-apollo-prisma-ts.git"
+	},
+	"keywords": [
+		"javascript",
+		"js",
+		"typescript",
+		"ts",
+		"eslint",
+		"prettier",
+		"husky",
+		"graphql",
+		"apollo-server",
+		"codegenerator"
+	],
+	"author": "jeyofdev <jgregoire.pro@gmail.com>",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/jeyofdev/starter-graphql-apollo-prisma-ts.git/issues"
+	}
+}
