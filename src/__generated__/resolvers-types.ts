@@ -31,8 +31,8 @@ export type AddMovieMutationResponse = {
 
 export type Movie = {
 	__typename?: 'Movie';
-	duration?: Maybe<Scalars['Int']>;
-	title?: Maybe<Scalars['String']>;
+	duration: Scalars['Int'];
+	title: Scalars['String'];
 };
 
 export type Mutation = {
@@ -195,8 +195,8 @@ export type MovieResolvers<
 	ContextType = IContext,
 	ParentType extends ResolversParentTypes['Movie'] = ResolversParentTypes['Movie'],
 > = ResolversObject<{
-	duration?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
-	title?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+	duration?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
+	title?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
 	__isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 

@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
 import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
-import { context, IContext } from './context';
+import { IContext, context } from './context';
 import resolvers from './resolvers';
 
 const runServer = async () => {

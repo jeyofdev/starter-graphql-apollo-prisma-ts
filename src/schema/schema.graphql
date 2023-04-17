@@ -1,6 +1,6 @@
 type Movie {
-	title: String
-	duration: Int
+	title: String!
+	duration: Int!
 }
 
 type AddMovieMutationResponse {

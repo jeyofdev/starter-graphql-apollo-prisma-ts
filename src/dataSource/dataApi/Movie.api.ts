@@ -1,7 +1,4 @@
-import {
-	Movie,
-	// AddMovieMutationResponse,
-} from '../../__generated__/resolvers-types';
+import { AddMovieMutationResponse, Movie } from '__generated__/resolvers-types';
 import moviesData from '../data/movie.data';
 
 class MovieAPI {
@@ -11,16 +8,16 @@ class MovieAPI {
 		return this.movies;
 	}
 
-	// addMovie(movie: Movie): Promise<AddMovieMutationResponse> {
-	// 	this.movies.push(movie);
+	async addMovie(movie: Movie): Promise<AddMovieMutationResponse> {
+		this.movies.push(movie);
 
-	// 	return {
-	// 		code: '200',
-	// 		success: true,
-	// 		message: 'New book added!',
-	// 		movie: this.movies[this.movies.length - 1],
-	// 	};
-	// }
+		return {
+			code: '200',
+			success: true,
+			message: 'New book added!',
+			movie: this.movies[this.movies.length - 1],
+		};
+	}
 }
 
 export default MovieAPI;
