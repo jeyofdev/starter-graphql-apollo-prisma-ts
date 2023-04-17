@@ -1,0 +1,19 @@
+type Movie {
+	title: String
+	duration: Int
+}
+
+type AddMovieMutationResponse {
+	code: String!
+	success: Boolean!
+	message: String!
+	movie: Movie!
+}
+
+type Query {
+	movies: [Movie]
+}
+
+type Mutation {
+	addBook(title: String, duration: Int): AddMovieMutationResponse
+}

@@ -1,18 +1,11 @@
 import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
+import { readFileSync } from 'fs';
 
 const runServer = async () => {
-	const typeDefs = `
-  type Movie {
-    title: String
-    duration: Int
-  }
-
-	type Query {
-    movies: [Movie]
-  }
-`;
-
+	const typeDefs = readFileSync('./src/schema/schema.graphql', {
+		encoding: 'utf-8',
+	});
 	const movies = [
 		{
 			title: 'Avatar',
