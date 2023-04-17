@@ -6,7 +6,8 @@
 	"scripts": {
 		"compile": "tsc",
 		"postinstall": "npm run compile",
-		"dev": "npm run compile && node ./dist/index.js",
+		"start": "npm run compile && nodemon ./dist/index.js",
+		"dev": "nodemon --exec ts-node src/index.ts",
 		"lint": "eslint . --fix --max-warnings=0",
 		"prepare": "husky install"
 	},
@@ -56,5 +57,8 @@
 			"eslint --max-warnings=0"
 		],
 		"*.{js,md,json}": "prettier --cache --write"
+	},
+	"dependencies": {
+		"ts-node": "^10.9.1"
 	}
 }
