@@ -4,7 +4,9 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"compile": "tsc",
+		"postinstall": "npm run compile",
+		"dev": "npm run compile && node ./dist/index.js"
 	},
 	"repository": {
 		"type": "git",
@@ -26,5 +28,10 @@
 	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/jeyofdev/starter-graphql-apollo-prisma-ts.git/issues"
+	},
+	"devDependencies": {
+		"@types/node": "^18.15.11",
+		"nodemon": "^2.0.22",
+		"typescript": "^5.0.4"
 	}
 }
