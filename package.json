@@ -8,8 +8,9 @@
 		"postinstall": "npm run compile",
 		"start": "npm run compile && node ./dist/index.js",
 		"dev": "nodemon --exec ts-node src/index.ts",
-		"lint": "eslint . --fix --max-warnings=0",
-		"prepare": "husky install"
+		"lint": "eslint . --fix --no-ignore --max-warnings=0",
+		"prepare": "husky install",
+		"generate": "graphql-codegen --config codegen.ts"
 	},
 	"repository": {
 		"type": "git",
@@ -33,6 +34,9 @@
 		"url": "https://github.com/jeyofdev/starter-graphql-apollo-prisma-ts.git/issues"
 	},
 	"devDependencies": {
+		"@graphql-codegen/cli": "3.3.0",
+		"@graphql-codegen/typescript": "3.0.3",
+		"@graphql-codegen/typescript-resolvers": "3.2.0",
 		"@types/node": "^18.15.11",
 		"@typescript-eslint/eslint-plugin": "^5.58.0",
 		"@typescript-eslint/parser": "^5.58.0",
@@ -47,7 +51,8 @@
 		"lint-staged": "^13.2.1",
 		"nodemon": "^2.0.22",
 		"prettier": "^2.8.7",
-		"typescript": "^5.0.4"
+		"typescript": "^5.0.4",
+		"@graphql-codegen/introspection": "3.0.1"
 	},
 	"hooks": {
 		"pre-commit": "npm run lint"
@@ -55,7 +60,7 @@
 	"lint-staged": {
 		"*.{js,ts}": [
 			"prettier --write",
-			"eslint --max-warnings=0"
+			"eslint --fix --no-ignore --max-warnings=0"
 		],
 		"*.{js,md,json}": "prettier --cache --write"
 	},

@@ -30,5 +30,5 @@ module.exports = {
 		'no-console': 'warn',
 		'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
 	},
-	ignorePatterns: ['.eslintrc.cjs'],
+	ignorePatterns: ['.eslintrc.cjs', 'codegen.ts', 'src/__generated__'],
 };
