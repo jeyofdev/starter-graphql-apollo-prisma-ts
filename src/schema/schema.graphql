@@ -7,7 +7,7 @@ type AddMovieMutationResponse {
 	code: String!
 	success: Boolean!
 	message: String!
-	movie: Movie!
+	movie: Movie
 }
 
 type Query {
@@ -15,5 +15,5 @@ type Query {
 }
 
 type Mutation {
-	addBook(title: String, duration: Int): AddMovieMutationResponse
+	addMovie(title: String, duration: Int): AddMovieMutationResponse
 }

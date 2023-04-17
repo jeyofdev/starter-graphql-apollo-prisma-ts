@@ -50,13 +50,9 @@
 						"description": null,
 						"args": [],
 						"type": {
-							"kind": "NON_NULL",
-							"name": null,
-							"ofType": {
-								"kind": "OBJECT",
-								"name": "Movie",
-								"ofType": null
-							}
+							"kind": "OBJECT",
+							"name": "Movie",
+							"ofType": null
 						},
 						"isDeprecated": false,
 						"deprecationReason": null
@@ -144,7 +140,7 @@
 				"description": null,
 				"fields": [
 					{
-						"name": "addBook",
+						"name": "addMovie",
 						"description": null,
 						"args": [
 							{

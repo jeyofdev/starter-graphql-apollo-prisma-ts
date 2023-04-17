@@ -1,4 +1,5 @@
 import { GraphQLResolveInfo } from 'graphql';
+import { IContext } from '../context';
 
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
@@ -24,7 +25,7 @@ export type AddMovieMutationResponse = {
 	__typename?: 'AddMovieMutationResponse';
 	code: Scalars['String'];
 	message: Scalars['String'];
-	movie: Movie;
+	movie?: Maybe<Movie>;
 	success: Scalars['Boolean'];
 };
 
@@ -36,10 +37,10 @@ export type Movie = {
 
 export type Mutation = {
 	__typename?: 'Mutation';
-	addBook?: Maybe<AddMovieMutationResponse>;
+	addMovie?: Maybe<AddMovieMutationResponse>;
 };
 
-export type MutationAddBookArgs = {
+export type MutationAddMovieArgs = {
 	duration?: InputMaybe<Scalars['Int']>;
 	title?: InputMaybe<Scalars['String']>;
 };
@@ -180,18 +181,18 @@ export type ResolversParentTypes = ResolversObject<{
 }>;
 
 export type AddMovieMutationResponseResolvers<
-	ContextType = any,
+	ContextType = IContext,
 	ParentType extends ResolversParentTypes['AddMovieMutationResponse'] = ResolversParentTypes['AddMovieMutationResponse'],
 > = ResolversObject<{
 	code?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
 	message?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
-	movie?: Resolver<ResolversTypes['Movie'], ParentType, ContextType>;
+	movie?: Resolver<Maybe<ResolversTypes['Movie']>, ParentType, ContextType>;
 	success?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
 	__isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
 export type MovieResolvers<
-	ContextType = any,
+	ContextType = IContext,
 	ParentType extends ResolversParentTypes['Movie'] = ResolversParentTypes['Movie'],
 > = ResolversObject<{
 	duration?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
@@ -200,19 +201,19 @@ export type MovieResolvers<
 }>;
 
 export type MutationResolvers<
-	ContextType = any,
+	ContextType = IContext,
 	ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation'],
 > = ResolversObject<{
-	addBook?: Resolver<
+	addMovie?: Resolver<
 		Maybe<ResolversTypes['AddMovieMutationResponse']>,
 		ParentType,
 		ContextType,
-		Partial<MutationAddBookArgs>
+		Partial<MutationAddMovieArgs>
 	>;
 }>;
 
 export type QueryResolvers<
-	ContextType = any,
+	ContextType = IContext,
 	ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query'],
 > = ResolversObject<{
 	movies?: Resolver<
@@ -222,7 +223,7 @@ export type QueryResolvers<
 	>;
 }>;
 
-export type Resolvers<ContextType = any> = ResolversObject<{
+export type Resolvers<ContextType = IContext> = ResolversObject<{
 	AddMovieMutationResponse?: AddMovieMutationResponseResolvers<ContextType>;
 	Movie?: MovieResolvers<ContextType>;
 	Mutation?: MutationResolvers<ContextType>;

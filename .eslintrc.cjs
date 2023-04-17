@@ -29,6 +29,8 @@ module.exports = {
 	rules: {
 		'no-console': 'warn',
 		'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+		'import/no-cycle': [2, { maxDepth: 1 }],
 	},
+
 	ignorePatterns: ['.eslintrc.cjs', 'codegen.ts', 'src/__generated__'],
 };
