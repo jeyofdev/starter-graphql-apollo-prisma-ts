@@ -7,7 +7,7 @@
 		"compile": "tsc",
 		"postinstall": "npm run compile",
 		"start": "npm run compile && node ./dist/index.js",
-		"dev": "nodemon --exec ts-node src/index.ts",
+		"dev": "concurrently  --names \"CodeGen,TS,Nodemon\" -c \"yellow,blueBright,green\" \"graphql-codegen --watch 'src/**/*.ts'\"  \"tsc -w \" \"nodemon ./dist/index.js \"",
 		"lint": "eslint . --fix --no-ignore --max-warnings=0",
 		"prepare": "husky install",
 		"generate": "graphql-codegen --config codegen.ts"
@@ -35,11 +35,13 @@
 	},
 	"devDependencies": {
 		"@graphql-codegen/cli": "3.3.0",
+		"@graphql-codegen/introspection": "3.0.1",
 		"@graphql-codegen/typescript": "3.0.3",
 		"@graphql-codegen/typescript-resolvers": "3.2.0",
 		"@types/node": "^18.15.11",
 		"@typescript-eslint/eslint-plugin": "^5.58.0",
 		"@typescript-eslint/parser": "^5.58.0",
+		"concurrently": "^8.0.1",
 		"eslint": "^8.38.0",
 		"eslint-config-airbnb": "^19.0.4",
 		"eslint-config-airbnb-typescript": "^17.0.0",
@@ -51,8 +53,7 @@
 		"lint-staged": "^13.2.1",
 		"nodemon": "^2.0.22",
 		"prettier": "^2.8.7",
-		"typescript": "^5.0.4",
-		"@graphql-codegen/introspection": "3.0.1"
+		"typescript": "^5.0.4"
 	},
 	"hooks": {
 		"pre-commit": "npm run lint"
