@@ -1,6 +1,4 @@
 {
-	"include": ["src"],
-	"exclude": ["dist", "node_modules"],
 	"compilerOptions": {
 		"target": "ES5",
 		"module": "commonjs",
@@ -13,10 +11,12 @@
 		"noUnusedParameters": true,
 		"noUncheckedIndexedAccess": true,
 		"useUnknownInCatchVariables": true,
-		"outDir": "dist",
+		"outDir": "./dist",
 		"baseUrl": "./src",
 		"allowSyntheticDefaultImports": true,
-		"strict": true,
-		"sourceMap": true
-	}
+		"sourceMap": true,
+		"strict": true
+	},
+	"include": ["src"],
+	"exclude": ["dist", "node_modules"]
 }

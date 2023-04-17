@@ -6,7 +6,8 @@
 	"scripts": {
 		"compile": "tsc",
 		"postinstall": "npm run compile",
-		"dev": "npm run compile && node ./dist/index.js"
+		"dev": "npm run compile && node ./dist/index.js",
+		"lint": "eslint . --fix --max-warnings=0"
 	},
 	"repository": {
 		"type": "git",
@@ -31,7 +32,16 @@
 	},
 	"devDependencies": {
 		"@types/node": "^18.15.11",
+		"@typescript-eslint/eslint-plugin": "^5.58.0",
+		"@typescript-eslint/parser": "^5.58.0",
+		"eslint": "^8.38.0",
+		"eslint-config-airbnb": "^19.0.4",
+		"eslint-config-airbnb-typescript": "^17.0.0",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-prettier": "^4.2.1",
 		"nodemon": "^2.0.22",
+		"prettier": "^2.8.7",
 		"typescript": "^5.0.4"
 	}
 }
