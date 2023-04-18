@@ -7,8 +7,8 @@
 		"compile": "tsc",
 		"postinstall": "npm run compile",
 		"start": "npm run compile && node ./dist/index.js",
-		"dev": "concurrently  --names \"CodeGen,TS,Nodemon\" -c \"yellow,blueBright,green\" \"graphql-codegen --watch 'src/**/*.ts'\"  \"tsc -w \" \"nodemon ./dist/index.js \"",
-		"lint": "eslint . --fix --no-ignore --max-warnings=0",
+		"dev": "npm run compile && concurrently --names \"CodeGen,TS,Nodemon\" -c \"yellow,blueBright,green\" \"graphql-codegen --watch 'src/**/*.ts'\"  \"tsc -w \" \"nodemon ./dist/index.js \"",
+		"lint": "eslint src --fix --no-ignore --max-warnings=0",
 		"prepare": "husky install",
 		"generate": "graphql-codegen --config codegen.ts"
 	},
