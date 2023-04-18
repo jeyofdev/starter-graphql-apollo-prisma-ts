@@ -32,6 +32,7 @@ export type AddMovieMutationResponse = {
 export type Movie = {
 	__typename?: 'Movie';
 	duration: Scalars['Int'];
+	id?: Maybe<Scalars['ID']>;
 	title: Scalars['String'];
 };
 
@@ -162,6 +163,7 @@ export type DirectiveResolverFn<
 export type ResolversTypes = ResolversObject<{
 	AddMovieMutationResponse: ResolverTypeWrapper<AddMovieMutationResponse>;
 	Boolean: ResolverTypeWrapper<Scalars['Boolean']>;
+	ID: ResolverTypeWrapper<Scalars['ID']>;
 	Int: ResolverTypeWrapper<Scalars['Int']>;
 	Movie: ResolverTypeWrapper<Movie>;
 	Mutation: ResolverTypeWrapper<{}>;
@@ -173,6 +175,7 @@ export type ResolversTypes = ResolversObject<{
 export type ResolversParentTypes = ResolversObject<{
 	AddMovieMutationResponse: AddMovieMutationResponse;
 	Boolean: Scalars['Boolean'];
+	ID: Scalars['ID'];
 	Int: Scalars['Int'];
 	Movie: Movie;
 	Mutation: {};
@@ -196,6 +199,7 @@ export type MovieResolvers<
 	ParentType extends ResolversParentTypes['Movie'] = ResolversParentTypes['Movie'],
 > = ResolversObject<{
 	duration?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
+	id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>;
 	title?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
 	__isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;

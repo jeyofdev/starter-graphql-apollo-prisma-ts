@@ -1,13 +1,9 @@
-import MovieAPI from '../dataSource/dataApi/Movie.api';
+import { PrismaClient } from '@prisma/client';
 
 export interface IContext {
-	dataSource: {
-		movieAPI: MovieAPI;
-	};
+	prisma: PrismaClient;
 }
 
 export const context = {
-	dataSource: {
-		movieAPI: new MovieAPI(),
-	},
+	prisma: new PrismaClient(),
 };

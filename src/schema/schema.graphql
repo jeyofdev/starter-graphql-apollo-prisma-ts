@@ -1,4 +1,5 @@
 type Movie {
+	id: ID
 	title: String!
 	duration: Int!
 }
