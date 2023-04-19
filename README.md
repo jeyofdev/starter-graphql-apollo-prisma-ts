@@ -1,5 +1,10 @@
 # starter graphql apollo prisma
 
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/46073105/233112820-6446b9b5-ae11-4f05-a2c5-cea52987cf91.png" width="60%">
+</div>
+
+
 ## Tools
 
 - [Graphql](https://graphql.org/) A query language for your API.
