@@ -4,7 +4,7 @@ import { IContext } from '../context';
 
 const mutations: MutationResolvers = {
 	Mutation: {
-		addMovie: async (_: any, args: Movie, context: IContext) =>
+		addMovie: async (_: never, args: Movie, context: IContext) =>
 			MovieService.addMovie(context.prisma, args),
 	},
 };

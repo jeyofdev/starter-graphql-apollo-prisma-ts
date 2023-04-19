@@ -6,7 +6,7 @@
 	"scripts": {
 		"compile": "tsc",
 		"postinstall": "npm run compile",
-		"start": "npm run compile && node ./dist/index.js",
+		"build": "npm run compile && node ./dist/index.js",
 		"dev": "npm run compile && concurrently --names \"CodeGen,TS,Nodemon\" -c \"yellow,blueBright,green\" \"graphql-codegen --watch 'src/**/*.ts'\"  \"tsc -w \" \"nodemon ./dist/index.js \"",
 		"lint": "eslint src --fix --no-ignore --max-warnings=0",
 		"prepare": "husky install",
@@ -26,7 +26,7 @@
 		"husky",
 		"graphql",
 		"apollo-server",
-		"codegenerator"
+		"codegen"
 	],
 	"author": "jeyofdev <jgregoire.pro@gmail.com>",
 	"license": "ISC",
@@ -69,6 +69,7 @@
 	"dependencies": {
 		"@apollo/server": "^4.6.0",
 		"@prisma/client": "^4.13.0",
+		"dotenv": "^16.0.3",
 		"graphql": "^16.6.0",
 		"ts-node": "^10.9.1"
 	},

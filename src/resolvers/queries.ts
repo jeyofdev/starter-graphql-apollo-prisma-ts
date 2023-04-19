@@ -4,7 +4,7 @@ import { IContext } from '../context';
 
 const queries: QueryResolvers = {
 	Query: {
-		movies: (_: any, __: any, context: IContext) =>
+		movies: (_: never, __: never, context: IContext) =>
 			MovieService.getMovies(context.prisma),
 	},
 };
