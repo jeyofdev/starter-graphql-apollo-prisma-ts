@@ -1,9 +1,9 @@
-# starter graphql apollo prisma
+# Starter Graphql Apollo Prisma
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/46073105/233112820-6446b9b5-ae11-4f05-a2c5-cea52987cf91.png" width="60%">
+  <img src="https://user-images.githubusercontent.com/46073105/234075482-cc9d3dee-885b-4e5c-97f3-1d55d4ad7950.png" width="60%">
+  <p>Setting up a project fullstack with Node, Typescript, Graphql, Apollo, Codegen and Prisma. </p>
 </div>
-
 
 ## Tools
 
@@ -20,7 +20,7 @@
 
 ## Getting starting
 
-creates the .env file in the root directory of the project, which is used for defining environment variables
+Creates the .env file in the root directory of the project, which is used for defining environment variables
 
 ### Prerequisites
 
