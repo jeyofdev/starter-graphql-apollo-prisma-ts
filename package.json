@@ -32,7 +32,7 @@
 	"author": "jeyofdev <jgregoire.pro@gmail.com>",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/jeyofdev/starter-graphql-apollo-prisma-ts.git/issues"
+		"url": "https://github.com/jeyofdev/starter-graphql-apollo-prisma-ts/issues"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.21.5",
